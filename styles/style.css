@@ -50,7 +50,8 @@ ol {
   min-width: 711px;
 }
 
-.result__video-container{
+.result__video-container {
+  position: relative;
   padding-top: 78px;
   padding-bottom: 16px; 
 }
@@ -59,10 +60,120 @@ ol {
   width: 100%;
 }
 
-.search-form{
+.search-form {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.search-form__textfield {
+  background-color: #1b1919;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.search-form__label {
+  display: flex;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield{
+  appearance: none;
+  min-width: 225px;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.search-form__checkbox {
+  cursor: pointer;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__textfield {
+  appearance: none;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  width: 90%;
+  height: 90%;
+  border: none;
+  background-color: #fff;
+}
+
+.search-form__label:has(.search-form__checkbox):hover {
+  text-decoration: underline;
+}
+
+.button {
+  cursor: pointer;
+  border: 1px solid #fff;
+  background-color: #1b1919;
+  height: 34px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px ;
+  color: #fff;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .title {
@@ -70,14 +181,30 @@ ol {
   padding-bottom: 26px;
 }
 
-.content__list {
-  max-height: 298px;
-  overflow-y: scroll;
-}
+
 
 .content__details{
   width: 100%;
 }
+
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  width: 399px;
+  height: 298px;
+  overflow-y: scroll;
+} 
 
 .content__list-item:not(:last-child) {
   padding-bottom: 30px;
@@ -97,39 +224,56 @@ ol {
   width: 100%;
 }
 
-.search-form__fieldset-title{
-  font-weight: 400;
-  font-size: 18px;
-}
 
-.title {
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 94%;
-  text-transform: uppercase;
-  color: #fff;
-}
 
-.content__accent {
-  color: #545050;
-}
-
-.content__card-link{
+.content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
+  margin: 2px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+  border: none;
 }
 
 .content__video-card-title{
+  font-family: Oswald;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
+  padding-bottom: 6px;
 }
 
 .content__video-card-description{
   line-height: 90%;
 }
 
+.result__video-container {
+  position: relative;
+}
 
+.content__list{
+  position: relative;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
 
 .visually-hidden {
   position: absolute;
@@ -145,46 +289,16 @@ fieldset{
   border: none;
 }
 
-.search-form__label{
-  width: fit-content;
+
+.search-form__submit-button {
+  width: 194px;
 }
 
-.search-form__textfield{
-  appearance: none;
+.more-button {
+  width: 399px;
 }
 
-.search-form__checkbox{
-  cursor: pointer;
+.content__card-link_current {
+  background-color: #545050;
+  border: none;
 }
-
-/* .search-form__checkbox-list создана специально для того, чтобы выстроить чекбоксы в линию. */
-
-.search-form__pseudo-checkbox{
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  /* margin-right: 5px; */
-  vertical-align: middle;
-  border: 1px solid #fff;
-  background-color: #1b1919;
- 
-}
-
-.button {
-  cursor: pointer;
-}
-
-
-.result__video-container {
-  position: relative;
-}
-
-.content__list{
-  position: relative;
-  position: relative;
-  position: relative;
-  position: relative;
-  position: relative;
-}
-
-
