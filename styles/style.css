@@ -201,13 +201,9 @@ ol {
 
 .content__list {
   position: relative;
-  width: 399px;
-  height: 298px;
+  width: 416px;
+  height: 300px;
   overflow: auto;
-}
-
-.content__list::-webkit-scrollbar { 
-  display: none; 
 }
 
 .content__list-item:not(:last-child) {
@@ -271,7 +267,6 @@ ol {
 
 .content__video-card-description {
   line-height: 90%;
-  max-width: 200px;
 }
 
 .result__video-container {
@@ -298,5 +293,4 @@ fieldset {
 
 .content__card-link_current {
   background-color: #545050;
-  border: none;
 }
