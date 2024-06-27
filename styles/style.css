@@ -18,7 +18,6 @@ html {
   background-color: #1b1919;
   display: flex;
   align-items: center;
-
 }
 
 h1,
@@ -161,9 +160,6 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
   font-family: inherit;
   cursor: pointer;
   border: 1px solid #fff;
@@ -173,7 +169,6 @@ ol {
   font-weight: 700;
   line-height: 21.6px;
   color: #fff;
-
 }
 
 .button:active {
@@ -242,7 +237,6 @@ ol {
 }
 
 .content__card-link {
-  
   display: block;
   color: #fff;
   text-decoration: none;
@@ -274,7 +268,7 @@ ol {
   font-size: 30px;
   text-transform: uppercase;
   padding-bottom: 6px;
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
   max-width: 200px;
 }
@@ -294,4 +288,3 @@ fieldset {
 .more-button {
   width: 399px;
 }
-
