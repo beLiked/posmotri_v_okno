@@ -96,7 +96,6 @@ ol {
 }
 
 .search-form__textfield {
-
   min-width: 225px;
   background-color: transparent;
   font-family: inherit;
@@ -155,9 +154,16 @@ ol {
 .search-form__submit-button {
   width: 194px;
   margin-top: auto;
+  padding-top: 5px;
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
   font-family: inherit;
   cursor: pointer;
   border: 1px solid #fff;
@@ -219,7 +225,6 @@ ol {
 
 .content__video-card {
   display: flex;
-  justify-content: space-between;
   height: 107px;
 }
 
@@ -232,14 +237,15 @@ ol {
 }
 
 .content__video-card-description-container {
+  margin-left: 2px;
   width: 200px;
 }
 
 .content__card-link {
+  
   display: block;
   color: #fff;
   text-decoration: none;
-  /* margin: 2px; */
 }
 
 .content__card-link:hover {
@@ -289,6 +295,3 @@ fieldset {
   width: 399px;
 }
 
-.content__card-link_current {
-  background-color: #545050;
-}
