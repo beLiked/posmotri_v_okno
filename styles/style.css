@@ -226,7 +226,6 @@ ol {
 
 .content__video-card {
   display: flex;
-  min-height: 107px;
 }
 
 .content__video-card-thumbnail {
@@ -277,6 +276,9 @@ ol {
   padding-bottom: 6px;
   line-height: 30px;
   max-width: 200px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-description {
